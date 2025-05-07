@@ -227,17 +227,19 @@ backdrop-filter: blur(5px); /* Desfoque suave do fundo */
             position: relative;
             z-index: 2;
             background-color: rgba(255, 255, 255, 0.3);
-        }
-        .invitation-card {
-    /* já existente */
-    background-image: 
-        url('wmremove-transformed.jpeg'), /* imagem decorativa da carta */
-        url('imagem1.jpg'); /* imagem de fundo do slideshow */
-    background-blend-mode: overlay;
-    background-size: cover, cover;
-    background-position: center, center;
-    background-repeat: no-repeat, no-repeat;
+
+        }.invitation-card {
+  background-image:
+    linear-gradient(rgba(255, 255, 255, 0.6), rgba(255, 255, 255, 0.6)), /* camada branca semi-transparente */
+    url('wmremove-transformed.jpeg');
+  background-blend-mode: lighten; /* ou try 'overlay', 'soft-light', etc */
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  backdrop-filter: blur(5px);
+  -webkit-backdrop-filter: blur(5px);
 }
+
 @media (max-width: 768px) {
   .invitation-card {
     padding: 16px 12px;
