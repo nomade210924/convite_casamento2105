@@ -50,21 +50,29 @@
     }
 
 .invitation-card {
-  background-image: url('wmremove-transformed.jpeg');
-  background-size: contain;
-  background-repeat: no-repeat;
-  background-position: center;
+  position: relative;
   background-color: transparent;
-  opacity: 0.3; /* <<< TRANSPARÊNCIA DA CARTA TODA (imagem e textos) */
   padding: 60px 30px;
   max-width: 600px;
   width: 90%;
   border: none;
   box-shadow: none;
-  position: relative;
   z-index: 2;
   text-align: center;
 }
+
+.invitation-card::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background-image: url('wmremove-transformed.jpeg');
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
+  opacity: 0.5; /* SOMENTE a imagem fica transparente */
+  z-index: -1;
+}
+
 
 
 
